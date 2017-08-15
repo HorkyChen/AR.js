@@ -14,7 +14,7 @@
 		to ARController is an image, the second argument is used as the camera param.
 
 		The camera parameters argument can be either an ARCameraParam or an URL to a camera definition file.
-		If the camera argument is an URL, it is loaded into a new ARCameraParam, and the ARController dispatches
+		If the camera argument is an URL, it is loaded into a new ARCameraParam, and the ARController dispatchesMediaStreamTrackMediaStreamTrack
 		a 'load' event and calls the onload method if it is defined.
 
 	 	@exports ARController
