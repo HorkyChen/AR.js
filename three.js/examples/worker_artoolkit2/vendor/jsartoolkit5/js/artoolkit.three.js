@@ -286,7 +286,9 @@
 
 				}
 				if (obj) {
-					obj.matrix.elements.set(ev.data.matrix);
+                    for (var i=0; i<obj.matrix.elements.length; i++) {
+                        obj.matrix.elements[i] = ev.data.matrix[i];
+                    }
 					obj.visible = true;
 				}
 			});
@@ -301,7 +303,9 @@
 				obj = this.threeNFTMarkers[ev.data.marker.id];
 
 				if (obj) {
-					obj.matrix.elements.set(ev.data.matrix);
+					for (var i=0; i<obj.matrix.elements.length; i++) {
+                        obj.matrix.elements[i] = ev.data.matrix[i];
+					}
 					obj.visible = true;
 				}
 			});
@@ -312,7 +316,9 @@
 			this.addEventListener('getMultiMarker', function(ev) {
 				var obj = this.threeMultiMarkers[ev.data.multiMarkerId];
 				if (obj) {
-					obj.matrix.elements.set(ev.data.matrix);
+                    for (var i=0; i<obj.matrix.elements.length; i++) {
+                        obj.matrix.elements[i] = ev.data.matrix[i];
+                    }
 					obj.visible = true;
 				}
 			});
@@ -327,7 +333,10 @@
 				var obj = this.threeMultiMarkers[marker];
 				if (obj && obj.markers && obj.markers[subMarkerID]) {
 					var sub = obj.markers[subMarkerID];
-					sub.matrix.elements.set(ev.data.matrix);
+					for (var i=0; i<obj.matrix.elements.length; i++) {
+                        usb.matrix.elements[i] = ev.data.matrix[i];
+                    }
+
 					sub.visible = (subMarker.visible >= 0);
 				}
 			});
