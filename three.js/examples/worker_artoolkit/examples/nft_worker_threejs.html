@@ -46,7 +46,7 @@ window.ARThreeOnLoad = function() {
 			console.log('ARController loaded', ev);
 
 			this.processingDone = false;
-			this.loadNFTMarker('../../../../../../data/dataNFT/pinball/starbucks', function(ev) {
+			this.loadNFTMarker('../../../../../../data/dataNFT/starbucks', function(ev) {
 				console.log('Created NFT marker', ev.result[0]);
 
 				var markerRoot = this.arController.createThreeNFTMarker(ev.result[0]);
