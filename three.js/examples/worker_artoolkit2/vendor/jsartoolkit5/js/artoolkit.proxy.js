@@ -4,7 +4,8 @@
 
 		Sets up event dispatch from the Worker ARController to the worker object and its listeners.
 
-		Use the ARProxy class to make use of the AR Worker.
+		Use the githu
+	 class to make use of the AR Worker.
 	*/
 	var makeARWorker = function() {
 		var worker = new Worker('../vendor/jsartoolkit5/js/artoolkit.worker.js');
